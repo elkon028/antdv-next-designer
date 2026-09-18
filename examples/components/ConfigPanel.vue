@@ -50,7 +50,7 @@
                                             </a-popover>
                                         </template>
                                     </span>
-                                    <a-switch size="default" v-model:checked="activeFeature[child.value]"></a-switch>
+                                    <a-switch v-model:checked="activeFeature[child.value]"></a-switch>
                                 </div>
                             </div>
                         </template>
@@ -66,7 +66,7 @@
                     <template v-for="menu in menus">
                         <div class="setting-item">
                             <span class="section-subtitle">{{ menu.title }}</span>
-                            <a-switch size="default" v-model:checked="menu.open"></a-switch>
+                            <a-switch v-model:checked="menu.open"></a-switch>
                         </div>
                         <div>
                             <a-checkbox-group class="template-grid" v-model:value="menu.checked" :disabled="!menu.open">
@@ -90,7 +90,7 @@
                 <div class="permission-block">
                     <template v-for="(com, idx) in componentPermission">
                         <div class="permission-item">
-                            <a-select mode="multiple" allowClear size="default" v-model:value="com.tag"
+                            <a-select mode="multiple" allowClear  v-model:value="com.tag"
                                       placeholder="请选择"
                                       style="width: 100%">
                                 <template v-for="item in items">
